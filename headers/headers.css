@@ -4,6 +4,24 @@
    background-color: #3A7D44   ;
 }
 
+/* Fond du menu déroulant en mode burger */
+    .navbar-menu.is-active {
+        background-color: #3A7D44; /* Couleur de fond claire */
+        /* ou */
+        background-color: #3A7D44; /* Couleur de fond foncée */
+    }
+
+    /* Couleur des liens dans le menu déroulant */
+    .navbar-menu.is-active .navbar-item {
+        color: white; /* Couleur du texte */
+    }
+
+    /* Couleur des liens au survol */
+    .navbar-menu.is-active .navbar-item:hover {
+        background-color: #3A7D44; /* Fond au survol */
+        color: white; /* Couleur du texte au survol */
+    }
+
 .navbar-item.has-text-white {
     color: white !important;
 }

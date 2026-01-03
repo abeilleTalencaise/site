@@ -14,12 +14,15 @@
 </head>
 <body>
     <header>
-        <nav class="navbar is-primary   ma-classe-header " role="navigation" aria-label="main navigation">
+        <nav class="navbar is-primary ma-classe-header" role="navigation" aria-label="main navigation">
             <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
+                <div class="navbar-brand ">
+                    <a class="navbar-item has-text-white" href="/">
                         <img src="img/logo.png" alt="Logo de mon site">
+                        
+                        L’Abeille Talencaise
                     </a>
+                    
                     <!-- Burger menu pour mobile -->
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
@@ -28,29 +31,16 @@
                     </a>
                 </div>
 
-                <!-- Menu principal -->
+                <!-- Menu principal (masqué en mobile) -->
                 <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item has-text-white" href="/">
-                            L’abeille Talencaise
-                        </a>
-                   <!--      <a class="navbar-item" href="/services">
-                            Services
-                        </a>
-                        <a class="navbar-item" href="/contact">
-                            Contact
-                        </a>-->
-                    </div>
+                    
 
-                    <!-- Menu de droite (optionnel) -->
+                    <!-- Menu de droite -->
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                             <!--   <a class="button is-light" href="/inscription">
-                                    S'inscrire
-                                </a> -->
-                                <a class="button  fond-custom " href="https://www.facebook.com/labeilletalencaise" target="_blank" aria-label="Notre page Facebook">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="facebook-logo">
+                                <a class="button fond-custom" href="https://www.facebook.com/labeilletalencaise" target="_blank" aria-label="Notre page Facebook">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="facebook-logo">
                                 </a>
                             </div>
                         </div>
@@ -59,6 +49,7 @@
             </div>
         </nav>
     </header>
+
     
     <!-- Contenu de la page -->
     <main>
@@ -189,6 +180,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="column is-5">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title has-text-weight-bold">Journée du développement durable</h2>
+                        <p class="news-description">
+                            Participez à notre stand pour découvrir comment l'apiculture contribue à un avenir durable.
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto;">
+                            <img class="news-image" src="img/logo.png" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
+                    </div>
+                </div>
+            </div>
  
     </div>
     </div>
@@ -201,5 +208,30 @@
             <p>© 2026 L'abeille Talencaise</p>
         </div>
     </footer>
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Récupère tous les éléments "navbar-burger"
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Vérifie s'il y a des éléments "navbar-burger"
+    if ($navbarBurgers.length > 0) {
+      // Ajoute un écouteur d'événement pour chaque burger
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          // Récupère la cible du burger (le menu)
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle la classe "is-active" sur le burger et le menu
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
