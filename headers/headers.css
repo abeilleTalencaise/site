@@ -1,6 +1,55 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+.navbar.ma-classe-header {
+   background-color: #3A7D44   ;
+}
+
+.navbar-item.has-text-white {
+    color: white !important;
+}
+
+
+.navbar-item:hover {
+    background-color: transparent !important;
+    color: white !important; /* ou la couleur de votre choix */
+}
+
+.fond-custom {
+   background-color: #3A7D44   ;
+}
+
+
 .text-custom {
-  color: #1A9581;
+  color: #3A7D44 ;
   font-weight: bold;
+}
+
+/* Assure que les colonnes ont la même hauteur */
+.columns.is-multiline {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns.is-multiline > .column {
+    display: flex;
+}
+
+/* Force les cartes à prendre toute la hauteur disponible */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Le contenu de la carte s'étire pour pousser l'image en bas */
+.news-card .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garde l'image en bas de la carte */
+.news-card .card-image {
+    margin-top: auto;
+    padding: 1rem;
 }

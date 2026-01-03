@@ -13,23 +13,77 @@
     </style>
 </head>
 <body>
-    <!-- Inclusion du header -->
-    <script src="header.js"></script>
+    <header>
+        <nav class="navbar is-primary   ma-classe-header " role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="img/logo.png" alt="Logo de mon site">
+                    </a>
+                    <!-- Burger menu pour mobile -->
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <!-- Menu principal -->
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item has-text-white" href="/">
+                            L’abeille Talencaise
+                        </a>
+                   <!--      <a class="navbar-item" href="/services">
+                            Services
+                        </a>
+                        <a class="navbar-item" href="/contact">
+                            Contact
+                        </a>-->
+                    </div>
+
+                    <!-- Menu de droite (optionnel) -->
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                             <!--   <a class="button is-light" href="/inscription">
+                                    S'inscrire
+                                </a> -->
+                                <a class="button  fond-custom " href="https://www.facebook.com/labeilletalencaise" target="_blank" aria-label="Notre page Facebook">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="facebook-logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     
     <!-- Contenu de la page -->
     <main>
-        <section class="hero is-fullheight ">
+        <section class="hero is-halfheight ">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-vcentered hero-content">
                     <div class="column is-6">
                         <h1 class="title is-1 text-custom">
-                           Ensemble pour les abeilles
+                           Bienvenue dans notre association
                         </h1>
-                        <p class="mb-5">
-                            Le regroupement d’apiculteurs qui oeuvre pour promouvoir l’apiculture et la biodiversité au sein de la commune de Talence
+                        <p>
+                        <strong> Qui sommes-nous ?  
+                        </strong> Un regroupement d’apiculteurs qui oeuvre pour promouvoir l’apiculture et la biodiversité au sein de la commune de Talence
                         </p>
-                        
+                        <p>
+                        <strong> Nos objectifs : 
+                        </strong> Protéger les abeilles, sensibiliser le public à leur importance, et partager notre passion pour l'apiculture à travers des activités éducatives et communautaires.
+                        </p>
+                        <strong> Organisation : 
+                        </strong> Bénévoles passionnés, apiculteurs, partenaires et collectivités locales.
+                        </p>
+                        <hr class="is-divider">
+                        </p>
+
                     </div>
                     
                     <div class="column is-6">
@@ -43,66 +97,107 @@
             </div>
         </div>
     </section>
-    <section class="news-section">
-        <div class="container">
-            <h2 class="title is-2 section-title">Nos missions</h2>
+    <section class="section">
             
-            <div class="columns">
-               
-                <div class="column is-4">
-                    <div class="card news-card">
-                        <div class="card-content">
-                            <h2 class="news-title">Fête de l'abeille</h2>
-                            <p class="news-description">
-                                Le 18 juin 2026, célébrez avec nous les 10 ans de l'association lors de la Fête de l'Abeille. Restez à l'affût pour les inscriptions !
-                            </p>
-                        </div>
-                        <div class="card-image">
-                            <figure class="image is-128x128" style="margin: 0 auto;">
-                                <img class="news-image" src="img/logo.png" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
-                            </figure>
-                        </div>
+    <div class="container">
+    <h2 class="title is-2 section-title">Nos missions</h2>
+    
+        <div class="columns is-multiline">
+        
+            <div class="column is-3">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title has-text-weight-bold">Rucher de la ville</h2>
+                        <p class="news-description">
+                            Entretien et gestion du rucher pédagogique de la ville de Talence, avec des activités éducatives pour les écoles et le grand public.
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto;">
+                            <img class="news-image" src="img/rucher.jpg" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
                     </div>
                 </div>
-                
-                <!-- Nouvelle 2 -->
-                <div class="column is-4">
-                    <div class="card news-card">
-                        <div class="card-content">
-                            <h3 class="is-capitalized">Initiation à l’apiculture</h3>
-                            <p class="news-description">
-                                Inscrivez-vous à notre initiation à l’apiculture ou participez à nos ateliers collaboratifs autour de l’abeille. 
-                                Au menu : piégeage des frelons, fabrication de ruchettes, et bien plus encore.
-                            </p>
-                        </div>
-                        <div class="card-image">
-                             <figure class="image is-128x128" style="margin: 0 auto;">
-                                <img class="news-image" src="img/abeille.webp" alt="Initiation à l’apiculture" style="width: 100%; height: 100%; object-fit: cover;">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Nouvelle 3 -->
-                <div class="column is-4">
-                    <div class="card news-card">
-                        <div class="card-content">
-                            <h3 class="news-title">Nos Ruchers</h3>
-                            <p class="news-description">
-                                Notre mission couvre l’entretien et la gestion du rucher de la ville de Talence, du lycée Pape Clément et ceux de Matméca.
-                            </p>
-                        </div>
-                        <div class="card-image">
-                                         <figure class="image is-128x128" style="margin: 0 auto; overflow: hidden;">
-                                <img class="news-image" src="img/apiculteur.webp" alt="Gestion ruchers" style="width: 100%; height: 100%; object-fit: cover;">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
+
+            <div class="column is-3">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title has-text-weight-bold">Projets collaboratifs</h2>
+                        <p class="news-description">
+                            Actions avec les écoles, collectivités et associations locales pour sensibiliser à l'importance des abeilles et de la biodiversité.
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto; overflow: hidden;">
+                            <img class="news-image" src="img/apiculteur.webp" alt="Gestion ruchers" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Nouvelle 2 -->
+            <div class="column is-3">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title has-text-weight-bold">Initiation à l'apiculture</h2>
+                        <p class="news-description">
+                            Organisation de séances de découverte de l’apiculture pour les débutants.
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto;">
+                            <img class="news-image" src="img/abeille.webp" alt="Initiation à l'apiculture" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="column is-3">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title has-text-weight-bold">Ateliers thématiques</h2>
+                        <p class="news-description">
+                           Organisation d'ateliers sur des sujets variés liés à l'apiculture : extraction de miel, gestion des ruches, plantes mellifères, lutte contre les frelons...
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto; overflow: hidden;">
+                            <img class="news-image" src="img/certificateur.webp" alt="Gestion ruchers" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
+                    </div>
+                </div>
+            </div>        
         </div>
+    </div>
     </section>
+    
+    <section class="section">
+    <div class="container">
+    <h2 class="title is-2 section-title">Actualité</h2>
+    
+        <div class="columns is-multiline">
+        
+            <div class="column is-5">
+                <div class="card news-card">
+                    <div class="card-content">
+                        <h2 class="news-title">Fête de l'abeille</h2>
+                        <p class="news-description">
+                            Le 18 juin 2026, célébrez avec nous les 10 ans de l'association lors de la Fête de l'Abeille. Restez à l'affût pour les inscriptions !
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-128x128" style="margin: 0 auto;">
+                            <img class="news-image" src="img/logo.png" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+ 
+    </div>
+    </div>
+    </section>
+
     </main>
     
     <footer class="footer">
