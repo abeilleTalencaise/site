@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="headers/headers.css">
 
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API_GOOGLE_MAPS&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
 
 
     <style>
@@ -174,7 +176,7 @@
     
         <div class="columns is-multiline">
         
-            <div class="column is-5">
+            <div class="column is-half">
                 <div class="card news-card">
                     <div class="card-content">
                         <h2 class="news-title has-text-weight-bold">Fête de l'abeille</h2>
@@ -185,7 +187,7 @@
                 </div>
             </div>
 
-            <div class="column is-5">
+           <div class="column is-half">
                 <div class="card news-card">
                     <div class="card-content">
                         <h2 class="news-title has-text-weight-bold">Journée du développement durable</h2>
@@ -201,6 +203,7 @@
     </section>
 <section class="section">
     <div class="container">
+        <div class="column is-half">
     <h2 class="title is-2 section-title text-custom">Contactez-nous</h2>
       <form action="https://formspree.io/f/xnjnolje" method="POST">
         <div class="field">
@@ -226,12 +229,48 @@
 
         <div class="field">
           <div class="control">
-            <button type="submit" class="button is-primary">Envoyer</button>
+            <button type="submit" class="button fond-custom">Envoyer</button>
           </div>
         </div>
       </form>
+      </div>
     </div>
   </section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2 section-title text-custom">Où nous trouver</h2>
+
+        <!-- Conteneur pour les colonnes -->
+        <div class="columns">
+
+            <!-- Colonne de gauche : Adresse -->
+            <div class="column is-half">
+                <div class="box">
+                    <h2 class="subtitle">Adresse</h2>
+                    <p>
+                        27 All. des Petits Rois,<br>
+                        33400 Talence<br>
+                        Rocade sortie 16<br>
+                        <br>
+                        44°47'17.6"N 0°35'36.6"W
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Colonne de droite : Carte Google Maps -->
+            <div class="column is-half">
+                <div class="box">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+        </div>
+    </div>
+</section>
 
     </main>
     
@@ -243,23 +282,14 @@
 
 
     <script>
-        function initMap() {
-            // Coordonnées de l'adresse (exemple : Paris)
-            const location = { lat: 48.8566, lng: 2.3522 };
+       const map = L.map('map').setView([44.7882, -0.5935], 12);
 
-            // Création de la carte
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: location,
-            });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        const marker = L.marker([44.7882, -0.5935]).addTo(map);
+        marker.bindPopup("<b>Notre association</b><br>27 All. des Petits Rois, 33400 Talence").openPopup();
 
-            // Ajout d'un marqueur
-            const marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                title: "Notre adresse",
-            });
-        }
   document.addEventListener('DOMContentLoaded', () => {
     // Récupère tous les éléments "navbar-burger"
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
