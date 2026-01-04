@@ -26,6 +26,7 @@
 </head>
 <body>
     <header>
+
         <nav class="navbar is-primary ma-classe-header" role="navigation" aria-label="main navigation">
             <div class="container">
                 <div class="navbar-brand ">
@@ -33,7 +34,13 @@
                         <img src="img/logo.png" alt="Logo de mon site">
                         L’Abeille Talencaise
                     </a>
-                    
+                    <a class="navbar-item has-text-white" href="#missions">
+                        Nos missions
+                    </a>
+                    <a class="navbar-item has-text-white" href="#actualites">
+                        Actualités
+                    </a>
+                 
                     <!-- Burger menu pour mobile -->
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
@@ -45,9 +52,11 @@
                 <!-- Menu principal (masqué en mobile) -->
                 <div id="navbarBasicExample" class="navbar-menu">
                     
-
                     <!-- Menu de droite -->
                     <div class="navbar-end">
+                         <a class="navbar-item has-text-white" href="#contact">
+                            Contactez-nous
+                        </a>
                         <div class="navbar-item">
                             <div class="buttons">
                                 <a class="button fond-custom" href="https://www.facebook.com/labeilletalencaise" target="_blank" aria-label="Notre page Facebook">
@@ -98,7 +107,7 @@
     <section class="section">
             
     <div class="container">
-    <h2 class="title is-2 section-title text-custom">Nos missions</h2>
+    <h2 id="missions" class="title is-2 section-title text-custom">Nos missions</h2>
     
         <div class="columns is-multiline">
         
@@ -172,7 +181,7 @@
     
     <section class="section">
     <div class="container">
-    <h2 class="title is-2 section-title text-custom">Actualités</h2>
+    <h2 id="actualites" class="title is-2 section-title text-custom">Actualités</h2>
     
         <div class="columns is-multiline">
         
@@ -204,7 +213,7 @@
 <section class="section">
     <div class="container">
         <div class="column is-half">
-    <h2 class="title is-2 section-title text-custom">Contactez-nous</h2>
+    <h2 id="contact" class="title is-2 section-title text-custom">Contactez-nous</h2>
       <form action="https://formspree.io/f/xnjnolje" method="POST">
         <div class="field">
           <label class="label">Nom</label>
