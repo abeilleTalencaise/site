@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'abeille Talencaise</title>
     <link rel="stylesheet" href="headers/headers.css">
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API_GOOGLE_MAPS&callback=initMap" async defer></script>
+
+
     <style>
         .facebook-logo {
             width: 20px;
             height: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
         }
     </style>
 </head>
@@ -19,7 +29,6 @@
                 <div class="navbar-brand ">
                     <a class="navbar-item has-text-white" href="/site">
                         <img src="img/logo.png" alt="Logo de mon site">
-                        
                         L’Abeille Talencaise
                     </a>
                     
@@ -161,7 +170,7 @@
     
     <section class="section">
     <div class="container">
-    <h2 class="title is-2 section-title">Actualité</h2>
+    <h2 class="title is-2 section-title">Actualités</h2>
     
         <div class="columns is-multiline">
         
@@ -173,11 +182,6 @@
                             Le 18 juin 2026, célébrez avec nous les 10 ans de l'association lors de la Fête de l'Abeille. Restez à l'affût pour les inscriptions !
                         </p>
                     </div>
-                    <div class="card-image">
-                        <figure class="image is-128x128" style="margin: 0 auto;">
-                            <img class="news-image" src="img/logo.png" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
-                        </figure>
-                    </div>
                 </div>
             </div>
 
@@ -188,11 +192,6 @@
                         <p class="news-description">
                             Participez à notre stand pour découvrir comment l'apiculture contribue à un avenir durable.
                         </p>
-                    </div>
-                    <div class="card-image">
-                        <figure class="image is-128x128" style="margin: 0 auto;">
-                            <img class="news-image" src="img/logo.png" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
-                        </figure>
                     </div>
                 </div>
             </div>
@@ -244,7 +243,6 @@
 
 
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
     // Récupère tous les éléments "navbar-burger"
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
