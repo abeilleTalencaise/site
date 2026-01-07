@@ -37,7 +37,7 @@
             width: 100%;
         }
     </style>
-
+    
 
 </head>
   
@@ -117,7 +117,7 @@
                     </div>
                     <div class="column is-6">
                         <figure class="image">
-                            <img src="img/rucher2.JPG" 
+                            <img src="img/rucher3.jpg" 
                                  alt="le rucher de  thouars" 
                                  class="hero-image">
                         </figure>
@@ -133,21 +133,22 @@
     
         <div class="columns is-multiline">
         
-            <div class="column is-3">
+           <div class="column is-3">
                 <div class="card news-card">
                     <div class="card-content">
-                        <h2 class="news-title has-text-weight-bold">Rucher de la ville</h2>
+                        <h2 class="news-title has-text-weight-bold">Projets collaboratifs</h2>
                         <p class="news-description">
-                            Entretien et gestion du rucher pédagogique de la ville de Talence, avec des activités éducatives pour les écoles et le grand public.
+                            Actions avec les écoles, collectivités et associations locales pour sensibiliser à l'importance des abeilles et de la biodiversité.
                         </p>
                     </div>
                     <div class="card-image">
-                        <figure class="image is-128x128" style="margin: 0 auto;">
-                            <img class="news-image" src="img/rucher.jpg" alt="Fête de l'abeille" style="width: 100%; height: 100%; object-fit: cover;">
+                        <figure class="image is-128x128" style="margin: 0 auto; overflow: hidden;">
+                            <img class="news-image" src="img/rucher.jpg" alt="Gestion ruchers" style="width: 100%; height: 100%; object-fit: cover;">
                         </figure>
                     </div>
                 </div>
             </div>
+
 
             <div class="column is-3">
                 <div class="card news-card">
@@ -279,9 +280,9 @@
             <!-- Colonne de gauche : Adresse -->
             <div class="column is-half">
                 <div class="box">
-                    <h2 class="subtitle">Adresse</h2>
+                    <h2 class="subtitle">La miellerie</h2>
                     <p>
-                        27 All. des Petits Rois,<br>
+                        All. des Petits Rois,<br>
                         33400 Talence<br>
                         Rocade sortie 16<br>
                         <br>
@@ -377,13 +378,15 @@
 </footer>
 
     <script>
+
+
        const map = L.map('map').setView([44.7882, -0.5935], 12);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         const marker = L.marker([44.7882, -0.5935]).addTo(map);
-        marker.bindPopup("<b>Notre association</b><br>27 All. des Petits Rois, 33400 Talence").openPopup();
+        marker.bindPopup("<b>Notre association</b><br>All. des Petits Rois, 33400 Talence").openPopup();
 
   document.addEventListener('DOMContentLoaded', () => {
     // Récupère tous les éléments "navbar-burger"
